@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ <!-- styleSheet -->
+ <link rel="stylesheet" href="./style.css">
+ <!-- script-JS -->
+ <script defer src="./script.js"></script>
+</head>
+<body>
+<div class="container">
+  
+    <header class="head">
+      <h1 class="heading">Learn to code by watching others</h1>
+      <p class="description">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable
+      </p>.
+    </header>
+  
+    <main class="main">
+      <h2 class="pricing"><span class="free-duration">Try it free 7 days</span> then $20/mo. thereafter</h2>
+      <form action="#" class="form" novalidate>
+  
+        <div class="field">
+          <label for="first-name" class="visually-hidden">First Name</label>
+          <input type="text" id="first-name" class="input" placeholder="First Name">
+          <p class="warn-1 warn"></p>
+        </div>
+  
+        <div class="field">
+          <label for="last-name" class="visually-hidden">Last Name</label>
+          <input type="text" class="input" id="last-name" placeholder="Last Name">
+          <p class="warn-2 warn"></p>
+        </div>
+  
+        <div class="field">
+          <label for="email" class="visually-hidden">Email Address</label>
+          <input type="email" id="email" class="input" placeholder="Email Address">
+          <p class="warn-3 warn"></p>
+         
+        </div>
+  
+        <div class="field pass-field">
+          <label for="password" class="visually-hidden">Password</label>
+          <input type="password" id="password" class="input" placeholder="Password">
+          <button type="button" class="pass-btn"><img src="./images/bx-show.svg" alt="show password" class="eye-img"></button>
+          <p class="warn-4 warn"></p>
+        </div>
+  
+        <button type="submit" class="btn">Claim your free trial</button>
+  
+        <p class="alert">By clicking the button, you are agreeing to our <a href="#" class="t-and-s">Terms and Services</a></p>
+      </form>
+      
+    </main>
+    
+</div>
+  
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+  <div class="overlay">
+    <div class="modal">
+      <img src="./images/bx-check.svg" alt="completed" class="check">
+      <h2 class="modal-heading">Signed up!</h2>
+      <p class="modal-description">You're successfully signed up</p>
+      <button type="button" class="modal-btn">ok</button>
+    </div>
+  </div>
+</body>
+</html>

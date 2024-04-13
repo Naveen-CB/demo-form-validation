@@ -1,0 +1,270 @@
+:root{
+  --ff: "Poppins", sans-serif;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+  --green-shadow: hsl(154, 59%, 41%);
+  --Blue: hsl(248, 32%, 49%);
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --very-dark-blue: hsl(249, 10%, 6%); 
+  --shadow: hsla(249, 10%, 26%, .5);
+  --modal-bg: hsla(249, 10%, 26%, .5);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --light-gb: hsl(246, 25%, 95%);
+  --white: hsl(0, 0%, 100%);
+  --fs: 1rem;
+}
+
+
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+*{
+  margin: 0;
+}
+
+p,h1, h2, h3, h4, h5, h6{
+  overflow-wrap: break-word;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+img, video, canvas, picture, figure{
+  display: block;
+  max-width: 100%;
+}
+
+input{
+  width: 100%;
+}
+
+button, textarea, input, select, option{
+  font: inherit;
+}
+
+body{
+  -webkit-font-smoothing : antialiased;
+  line-height: 1.5;
+}
+
+body{
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff);
+  font-size: var(--fs);
+  padding: 2rem;
+  background-image: url('./images/bg-intro-mobile.png');
+  background-repeat: no-repeat;
+  background-color: var(--Red);
+  position: relative;
+}
+
+@media (min-width: 375px) {
+  body{
+    background-image: url('./images/bg-intro-desktop.png');
+  }
+}
+
+.heading, .description{
+  text-align: center;
+  color: var(--white);
+}
+.heading{
+  margin-top: 3rem;
+}
+
+.description{
+  margin-top: 1.5rem;
+}
+
+.pricing{
+  font-weight: var(--fw-regular);
+  font-size: var(--fs);
+  padding: 1rem 4rem;
+  background-color: var(--Blue);
+  color: var(--white);
+  text-align: center;
+  border-radius: 1rem;
+  margin-top: 3rem;
+  box-shadow: 0 .5rem  2px var(--shadow);
+}
+
+.free-duration{
+  font-weight: var(--fw-semi-bold);
+}
+
+.form{
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--white);
+  display: grid;
+  gap: 1rem;
+  border-radius: 1rem;
+}
+
+.btn{
+  display: block;
+  width: 100%;
+}
+
+.input{
+  padding: .8rem 1rem;
+  border: 1px solid var(--Grayish-Blue);
+  border-radius: .3rem
+}
+.main{
+  max-width: 540px;
+  margin: auto;
+}
+
+.input::placeholder{
+  color: var(--very-dark-blue);
+  font-weight: var(--fw-semi-bold);
+}
+
+.btn{
+  padding: .8rem 0;
+  background-color: var(--Green);
+  color: var(--white);
+  border: none;
+  font-weight: var(--fw-medium);
+  border-radius: .3rem;
+  text-transform: uppercase;
+  box-shadow: 0 .3rem var(--green-shadow);
+  cursor: pointer;
+}
+
+.alert{
+  font-size: .75rem;
+  text-align: center;
+  color: var(--Grayish-Blue)
+}
+
+.t-and-s{
+  color: var(--Red);
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+}
+
+@media (min-width: 1100px) {
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 4rem;
+  }
+  .head{
+    margin: auto;
+  }
+  .heading, .description{
+    text-align: left;
+  }
+}
+
+@media (min-width: 600px) {
+  .container{
+    padding: 6rem;
+  }
+}
+
+
+.wrong{
+  background-image: url('./images/icon-error.svg');
+  background-repeat: no-repeat;
+  background-position: left 95% center;
+  border: 1px solid var(--Red);
+}
+
+.warn{
+  font-size: .8rem;
+  color: var(--Red);
+  align-self: flex-end;
+}
+
+.field{
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  outline: none;
+}
+
+.pass-field{
+  position: relative;
+}
+
+.pass-btn{
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  right: 10px;
+  transform: translateY(50%);
+}
+
+.modal{
+  background-color: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+}
+
+.check{
+  background-color: var(--light-gb);
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.modal-heading{
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.modal-description{
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.modal-btn{
+  padding: .4rem 2.5rem;
+  border-radius: 1.625rem;
+  border: none;
+  background-color: var(--Blue);
+  color: var(--white);
+  font-weight: var(--fw-medium);
+  font-size: 1.25rem; 
+  display: block;
+  margin: 1.5rem auto 0;
+  cursor: pointer;
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(0, 0%, 0%, .5);
+  position: absolute;
+  z-index: 999999;
+  display: none;
+}
+
